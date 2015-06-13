@@ -1,0 +1,26 @@
+{
+  "name": "js-viewport",
+  "version": "1.0.0",
+  "description": "Manage scale and translate of a view",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/johnsusi/js-viewport.git"
+  },
+  "author": "John Susi <john@susi.se>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnsusi/js-viewport/issues"
+  },
+  "homepage": "https://github.com/johnsusi/js-viewport#readme",
+  "dependencies": {
+    "gl-matrix": "^2.3.0",
+    "jquery": "^2.1.4"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  }
+}
