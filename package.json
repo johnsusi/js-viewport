@@ -2,9 +2,12 @@
   "name": "js-viewport",
   "version": "1.0.0",
   "description": "Manage scale and translate of a view",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "test": "mocha test/*.js"
+    "test": "mocha test/*.js",
+    "build": "browserify -t [ es6ify --arrowFunctions ] src/index.js -o bundle.js",
+    "min": "uglifyjs bundle.js > bundle.min.js",
+    "watch": "watch 'npm run build' ./src/ -u -d "
   },
   "repository": {
     "type": "git",
@@ -16,11 +19,16 @@
     "url": "https://github.com/johnsusi/js-viewport/issues"
   },
   "homepage": "https://github.com/johnsusi/js-viewport#readme",
-  "dependencies": {
-    "gl-matrix": "^2.3.0",
-    "jquery": "^2.1.4"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "mocha": "^2.2.5"
+    "browserify": "^10.2.4",
+    "es6ify": "^1.6.0",
+    "gl-matrix": "^2.3.0",
+    "jquery": "^2.1.4",
+    "jquery-mousewheel": "^3.1.12",
+    "mocha": "^2.2.5",
+    "uglify-js": "^1.3.5",
+    "watch": "^0.16.0",
+    "watchify": "^3.2.2"
   }
 }

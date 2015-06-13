@@ -1,0 +1,44 @@
+html, body, canvas {
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+canvas {
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-Index: 0;
+}
+
+#overlay {
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow: clip;
+  width: 320px;
+  height: 240px;
+  z-Index: 100;
+  background: rgba(163, 214, 245, 0.5);
+  pointer-events: none;
+
+}
+
+
+#info {
+
+  position: absolute;
+  z-Index: 1000;
+  left: 0;
+  top: 250px;
+  width: 320px;
+  height: 480px;
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow: clip;
+  background: rgba(206, 235, 251, 0.5);
+  font-family: 'monospace';
+  pointer-events: none;
+}
