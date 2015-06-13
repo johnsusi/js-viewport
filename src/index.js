@@ -118,7 +118,7 @@ $( function() {
       canvas.height = 1024;
       var g = canvas.getContext('2d');
       g.translate(0.5,0.5);
-      g.font = '48px';
+      g.font = '48px sans-serif';
       g.textAlign = 'center';
       g.fillStyle="rgb(255,255,255)";
       g.fillRect(0, 0, canvas.width, canvas.height);
