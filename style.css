@@ -26,6 +26,8 @@ canvas {
 
 }
 
+#map {
+}
 
 #info {
 
@@ -41,4 +43,13 @@ canvas {
   background: rgba(206, 235, 251, 0.5);
   font-family: 'monospace';
   pointer-events: none;
+}
+
+#actions {
+  
+  position: absolute;
+  z-Index: 2000;
+}
+
+button {
 }
