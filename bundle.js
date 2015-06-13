@@ -14381,6 +14381,14 @@ $(function() {
     var g = overlay.getContext('2d');
     g.setTransform(1, 0, 0, 1, 0, 0);
     g.clearRect(0, 0, overlay.width, overlay.height);
+    var sc = map.height / map.width;
+    g.strokeStyle = 'rgb(127,0,0)';
+    g.setLineDash([5, 15]);
+    g.beginPath();
+    g.moveTo(0, sc * overlay.width);
+    g.lineTo(overlay.width, sc * overlay.width);
+    g.stroke();
+    g.setLineDash([]);
     var p0 = vec2.fromValues(0, 0);
     var p1 = vec2.fromValues(image.width, image.height);
     var t2 = mat2d.create();
@@ -14388,9 +14396,9 @@ $(function() {
     mat2d.scale(t2, t2, [scale, scale]);
     mat2d.multiply(t2, t2, transform);
     g.setTransform(t2[0], t2[1], t2[2], t2[3], t2[4], t2[5]);
-    g.strokeStyle = 'rgb(127,50,50)';
-    g.strokeWidth = 10;
-    g.strokeRect(p0[0], p0[1], p1[0], p1[1]);
+    g.fillStyle = 'rgba(127,50,50, 0.7)';
+    g.fillRect(p0[0], p0[1], p1[0], p1[1]);
+    g.clearRect(150, 150, 300, 300);
     perf = performance.now() - perf;
     info('redraw', perf.toFixed(2) + 'ms');
     info('transform', '<br>' + '    ' + transform[0].toFixed(2) + ' ' + transform[1].toFixed(2) + '<br>' + '    ' + transform[2].toFixed(2) + ' ' + transform[3].toFixed(2) + '<br>' + '    ' + transform[4].toFixed(2) + ' ' + transform[5].toFixed(2));
